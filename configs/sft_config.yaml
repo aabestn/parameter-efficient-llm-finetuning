@@ -1,0 +1,22 @@
+model_name_or_path: "meta-llama/Llama-3-8b-hf"
+dataset_path: "data/processed/sft_data.jsonl"
+output_dir: "./checkpoints/sft"
+
+learning_rate: 2.0e-4
+num_train_epochs: 3
+per_device_train_batch_size: 4
+per_device_eval_batch_size: 4
+gradient_accumulation_steps: 4
+
+max_seq_length: 4096
+packing: true
+
+logging_steps: 10
+save_strategy: "steps"
+save_steps: 200
+evaluation_strategy: "steps"
+eval_steps: 200
+warmup_ratio: 0.03
+lr_scheduler_type: "cosine"
+bf16: true
+use_flash_attention_2: true

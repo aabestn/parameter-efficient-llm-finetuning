@@ -1,0 +1,8 @@
+evaluation:
+  task_list:
+    - "helm:mmlu:abstract_algebra:0"
+    - "helm:gsm8k:0"
+    - "community:arc:challenge:0"
+  output_dir: "./eval_results"
+  batch_size: 4
+  max_samples: 500

@@ -1,0 +1,2 @@
+{"instruction": "Write a C++ function to invert a binary tree.", "input": "", "output": "TreeNode* invertTree(TreeNode* root) {\n    if (!root) return nullptr;\n    std::swap(root->left, root->right);\n    invertTree(root->left);\n    invertTree(root->right);\n    return root;\n}"}
+{"instruction": "Explain FlashAttention-2 in simple terms.", "input": "", "output": "FlashAttention-2 optimizes GPU memory IO by computing exact attention in tiled blocks without materializing the full N x N attention matrix in HBM."}
